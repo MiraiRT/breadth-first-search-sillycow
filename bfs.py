@@ -106,7 +106,8 @@ def searching(player_root, field_root):
                 path.append(prev_node)
             path.reverse()
             write_log("\t>> Goal state")
-            return [path, count_max_queue]
+            write_log("\t\t>> Max Queue :" + str(count_max_queue))
+            return [path, depth]
         if player.hand_sheep + player.hand_pig + player.hand_horse + player.hand_cow == 0:
             write_log("\t>> Hand out")
             continue
